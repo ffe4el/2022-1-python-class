@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+<py-script>
+text_input = Element("text_input")
+results = Element("results")
+
+def guess(*args):
+    user_input=text_input.value
+    results.element.innerText=user_input.upper()
+    text_input.clear()
+</py-script>
+<main class="container">
+    <div>
+        <input type="text"
+               id="text_input"
+               placeholder="Input word"/>
+        <button id="answer_word" pys-onClick="guess">Guess</button>
+    </div>
+    <h1 id="results"></h1>
+</main>
+</body>
+</html>
